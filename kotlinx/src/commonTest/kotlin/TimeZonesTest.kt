@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import kotlinx.datetime.DatePeriod
 import krono.TimeZones
 import kotlin.test.Test

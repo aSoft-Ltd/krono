@@ -1,6 +1,6 @@
 import krono.Month
 import krono.LocalDate
-import expect.expect
+import kommander.expect
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString

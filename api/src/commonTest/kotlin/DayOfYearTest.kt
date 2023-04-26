@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import krono.utils.DayOfWeek
 import krono.DayOfWeek
 import krono.utils.DayOfYear

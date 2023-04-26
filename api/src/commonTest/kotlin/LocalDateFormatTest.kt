@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import krono.LocalDate
 import kotlin.test.Test
 

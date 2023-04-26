@@ -1,10 +1,11 @@
-import expect.expect
+import kommander.expect
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import krono.serializers.InstantSerializer
 import kotlin.test.Test
+import krono.Instant
 
 class InstantIsoSerializerTest {
 
