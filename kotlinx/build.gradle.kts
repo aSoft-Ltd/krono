@@ -4,7 +4,7 @@ plugins {
     id("tz.co.asoft.library")
 }
 
-description = "An multiplatform interoperable datetime library"
+description = "An implementation of the krono.api based on kotlinx"
 
 kotlin {
     jvm { library() }
@@ -18,7 +18,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(kotlinx.serialization.core)
+                api(projects.kronoApi)
+                api(kotlinx.datetime)
             }
         }
 

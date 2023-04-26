@@ -30,12 +30,12 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-rootProject.name = "lexi"
+rootProject.name = "krono"
 
 includeBuild("../able")
 
 // dependencies
-includeSubs("kommander", "../kommander", "core", "coroutines")
+includeSubs("kommander", "../kommander", "core")
 
 
-includeSubs("krono", ".", "api")
+includeSubs("krono", ".", "api", "kotlinx")

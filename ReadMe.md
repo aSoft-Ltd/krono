@@ -1,4 +1,4 @@
-# Lexi
+# Krono
 
 A Multiplatform logging library
 
@@ -16,21 +16,12 @@ A Multiplatform logging library
 ```kotlin
 dependencies {
     // if you need it in common code
-    implementation("tz.co.asoft:lexi-api:2.0.16")
-
-    // if you want to write logs to the console
-    implementation("tz.co.asoft:lexi-console:2.0.16")
-    
-    // if you want to write logs to your file
-    implementation("tz.co.asoft:lexi-file:2.0.16")
-    
-    // if you want to test writing logs on android
-    implementation("tz.co.asoft:lexi-test-android:2.0.16")
+    implementation("tz.co.asoft:krono-api:2.0.16")
 }
 ```
 
 ## Api Reference
-The full api reference of kevlar can be found at [https://asoft-ltd.github.io/krest](https://asoft-ltd.github.io/krest)
+The full api reference of kevlar can be found at [https://asoft-ltd.github.io/krono](https://asoft-ltd.github.io/krono)
 
 ## Support
 
