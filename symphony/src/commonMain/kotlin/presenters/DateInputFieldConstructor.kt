@@ -1,0 +1,51 @@
+@file:Suppress("NOTHING_TO_INLINE")
+
+package presenters
+
+import krono.LocalDate
+import presenters.internal.DateInputFieldImpl
+import kotlin.reflect.KProperty
+
+@Deprecated("use krono instead")
+inline fun DateInputField(
+    name: String,
+    isRequired: Boolean = false,
+    label: String = name,
+    hint: String = label,
+    value: LocalDate? = null,
+    isReadonly: Boolean = false,
+    pattern: String = DateInputFieldImpl.DEFAULT_PATTERN,
+    maxDate: LocalDate? = null,
+    minDate: LocalDate? = null,
+    noinline validator: ((LocalDate?) -> Unit)? = null
+): DateInputField = DateInputFieldImpl(name, isRequired, Label(label, isRequired), hint, value, isReadonly, pattern, maxDate, minDate, validator)
+
+@Deprecated("use krono instead")
+inline fun Fields.date(
+    name: String,
+    isRequired: Boolean = false,
+    label: String = name,
+    hint: String = label,
+    value: LocalDate? = null,
+    isReadonly: Boolean = false,
+    pattern: String = DateInputFieldImpl.DEFAULT_PATTERN,
+    maxDate: LocalDate? = null,
+    minDate: LocalDate? = null,
+    noinline validator: ((LocalDate?) -> Unit)? = null
+) = getOrCreate(name) {
+    DateInputField(name, isRequired, label, hint, value, isReadonly, pattern, maxDate, minDate, validator)
+}
+
+@Deprecated("use krono instead")
+inline fun Fields.date(
+    name: KProperty<Any?>,
+    isRequired: Boolean = false,
+    label: String = name.name,
+    hint: String = label,
+    value: LocalDate? = null,
+    isReadonly: Boolean = false,
+    pattern: String = DateInputFieldImpl.DEFAULT_PATTERN,
+    maxDate: LocalDate? = null,
+    minDate: LocalDate? = null,
+    noinline validator: ((LocalDate?) -> Unit)? = null
+) = date(name.name, isRequired, label, hint, value, isReadonly, pattern, maxDate, minDate, validator)
