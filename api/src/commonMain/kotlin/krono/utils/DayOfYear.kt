@@ -2,7 +2,7 @@
 
 package krono.utils
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 import kotlin.math.floor
 

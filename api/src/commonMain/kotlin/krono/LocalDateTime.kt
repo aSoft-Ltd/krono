@@ -5,7 +5,7 @@ package krono
 import kotlinx.serialization.Serializable
 import krono.serializers.LocalDateIsoSerializer
 import krono.serializers.LocalDateTimeIsoSerializer
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 @JsExport
 @Serializable(with = LocalDateTimeIsoSerializer::class)

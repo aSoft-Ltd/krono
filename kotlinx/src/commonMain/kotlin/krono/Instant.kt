@@ -4,7 +4,7 @@ package krono
 
 import kotlinx.serialization.Serializable
 import krono.serializers.InstantSerializer
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 @Serializable(with = InstantSerializer::class)

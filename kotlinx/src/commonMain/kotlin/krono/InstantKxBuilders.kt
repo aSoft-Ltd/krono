@@ -5,7 +5,7 @@ package krono
 
 import kotlinx.datetime.Clock
 import krono.internal.InstantImpl
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 @JsName("_ignore_instantFromLong")

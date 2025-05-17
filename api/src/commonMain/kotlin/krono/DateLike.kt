@@ -3,7 +3,7 @@
 
 package krono
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface DateLike : TemporalFormattable {
     val year: Int

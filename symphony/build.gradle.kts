@@ -20,17 +20,17 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(projects.symphonyInputsCore)
+                api(libs.symphony.input.core)
                 api(projects.kronoKotlinx)
             }
         }
 
         val commonTest by getting {
             dependencies {
-                implementation(projects.kommanderCoroutines)
-                implementation(projects.koncurrentLaterCoroutines)
-                implementation(projects.cinematicLiveTest)
-                implementation(projects.koncurrentExecutorsMock)
+                implementation(libs.kommander.coroutines)
+                implementation(libs.koncurrent.later.coroutines)
+                implementation(libs.cinematic.live.test)
+                implementation(libs.koncurrent.executors.mock)
             }
         }
     }

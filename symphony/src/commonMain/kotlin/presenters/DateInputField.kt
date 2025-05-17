@@ -4,7 +4,7 @@ package presenters
 
 import krono.LocalDate
 import presenters.properties.Typeable
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 @Deprecated("use krono instead")
 interface DateInputField : TransformingInputField<String, LocalDate>, DateOutputField, Typeable

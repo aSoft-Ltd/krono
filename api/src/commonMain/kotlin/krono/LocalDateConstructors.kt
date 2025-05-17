@@ -6,7 +6,7 @@ package krono
 import krono.internal.LocalDateImpl
 import krono.internal.utils.ensure
 import krono.utils.DaysOfMonth
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 import kotlin.jvm.JvmName
 import kotlin.jvm.JvmOverloads

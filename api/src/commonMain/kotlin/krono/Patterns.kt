@@ -2,7 +2,7 @@
 
 package krono
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 object Patterns {
     const val ISO_DATE = "{YYYY}-{MM}-{DD}"

@@ -2,7 +2,7 @@
 
 package krono
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 object TimeZones {
     val UTC = TimeZone("Z")

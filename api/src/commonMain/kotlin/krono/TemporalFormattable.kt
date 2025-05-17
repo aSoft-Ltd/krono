@@ -2,7 +2,7 @@
 
 package krono
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface TemporalFormattable {
     fun format(pattern: String): String

@@ -2,7 +2,7 @@
 
 package krono
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface Dateable<out D : Dateable<D>> {
     fun atDate(date: Int): D

@@ -6,7 +6,7 @@ package krono
 import krono.internal.formatters.PureDateFormatterImpl
 import krono.internal.formatters.PureDateTimeFormatterImpl
 import krono.internal.formatters.PureTimeFormatterImpl
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 @JsName("pureDateFormatter")

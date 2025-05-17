@@ -4,6 +4,6 @@ package krono
 
 import symphony.properties.Typeable
 import symphony.TransformingInputField
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface DateInputField : TransformingInputField<String, LocalDate>, DateOutputField, Typeable

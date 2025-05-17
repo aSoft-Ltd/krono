@@ -4,7 +4,7 @@
 package krono
 
 import krono.internal.TimeZoneImpl
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 @JsName("timeZoneOf")

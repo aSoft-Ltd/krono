@@ -2,6 +2,6 @@
 
 package krono.utils
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 fun isLeapYear(year: Int) = year % 4 == 0

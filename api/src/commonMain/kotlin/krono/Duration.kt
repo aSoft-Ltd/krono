@@ -2,6 +2,6 @@
 
 package krono
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 data class Duration(val value: Double, val unit: DurationUnit)

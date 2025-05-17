@@ -3,7 +3,7 @@ package krono.internal.formatters
 import krono.PureDateFormatter
 import krono.PureDateTimeFormatter
 import krono.PureTimeFormatter
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 @PublishedApi
 internal class PureDateTimeFormatterImpl private constructor(
