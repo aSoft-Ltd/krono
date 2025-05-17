@@ -34,7 +34,7 @@ rootProject.name = "krono"
 
 listOf(
     "kase", "kommander", "cinematic",
-    "koncurrent", "kevlar", "lexi",
+    "koncurrent", "kevlar", "lexi", "symphony",
     "kollections", "kotlinx-interoperable"
 ).forEach {
     includeBuild("../$it")
@@ -42,4 +42,5 @@ listOf(
 
 includeBuild("../able")
 
-includeSubs("krono", ".", "api", "kotlinx", "symphony")
+//includeSubs("krono", ".", "api", "kotlinx", "symphony")
+includeSubs("krono", ".", "api", "kotlinx")
