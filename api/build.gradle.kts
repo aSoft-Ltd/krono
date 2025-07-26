@@ -1,7 +1,5 @@
-import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 import org.jetbrains.kotlin.gradle.targets.js.npm.tasks.KotlinNpmInstallTask
-import kotlin.apply
 
 plugins {
     kotlin("multiplatform")
@@ -12,28 +10,29 @@ plugins {
 description = "An multiplatform interoperable datetime library"
 
 kotlin {
-    jvm { library() }
+    if (Targeting.JVM) jvm { library() }
     if (Targeting.JS) js(IR) { library() }
     if (Targeting.WASM) wasmJs { library() }
     if (Targeting.WASM) wasmWasi { library() }
-    val osxTargets = if (Targeting.OSX) osxTargets() else listOf()
-    val ndkTargets = if (Targeting.NDK) ndkTargets() else listOf()
-    val linuxTargets = if (Targeting.LINUX) linuxTargets() else listOf()
-    val mingwTargets = if (Targeting.MINGW) mingwTargets() else listOf()
+    if (Targeting.OSX) osxTargets() else listOf()
+    if (Targeting.NDK) ndkTargets() else listOf()
+    if (Targeting.LINUX) linuxTargets() else listOf()
+    if (Targeting.MINGW) mingwTargets() else listOf()
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                api(libs.kotlinx.exports)
-                api(kotlinx.serialization.core)
-            }
+        commonMain.dependencies {
+            api(libs.kotlinx.exports)
+            api(kotlinx.serialization.core)
         }
 
-        val commonTest by getting {
-            dependencies {
-                implementation(libs.kommander.core)
-                implementation(kotlinx.serialization.json)
-            }
+        commonTest.dependencies {
+            implementation(libs.kommander.core)
+            implementation(kotlinx.serialization.json)
+            implementation(kotlin("test"))
+        }
+
+        jvmTest.dependencies {
+            implementation(kotlin("test-junit5"))
         }
     }
 }
